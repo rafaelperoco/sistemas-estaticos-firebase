@@ -16,7 +16,7 @@ jobs:
       - name: Build
         run: npm run-script build public/
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@testing
         with:
           name: dist
           path: dist
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@testing
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
